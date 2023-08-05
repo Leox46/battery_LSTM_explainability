@@ -1,5 +1,6 @@
 numpy<=1.24.3
 streamlit==1.24.0
+openpyxl
 matplotlib
 tf_keras_vis
 tensorflow
