@@ -1,4 +1,5 @@
 matplotlib
 tf_keras_vis
+tensorflow
 xlsxwriter
 shap
