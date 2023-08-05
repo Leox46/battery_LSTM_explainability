@@ -2,6 +2,6 @@ matplotlib
 tf_keras_vis
 tensorflow
 xlsxwriter
-numpy=1.24.0
+numpy==1.24.0
 numba>=0.57.1
 shap
