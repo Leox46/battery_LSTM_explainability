@@ -1,7 +1,6 @@
 import streamlit as st
 import util_streamlit_deploy
 import pandas as pd
-import shap
 
 import xlsxwriter
 
@@ -59,42 +58,7 @@ if(technique == 'saliency'):
     c = util_streamlit_deploy.plot_saliency_map_streamlit(battery, matrix, excluded_features, first_cycle, last_cycle)
     st.pyplot(c)
 elif(technique == 'shap'):
-
-    features = dataset.drop(columns='capacity_predicted')
-
-    # Cycles to display
-    first_row = 0
-    last_row = 0
-    for i in range(len(matrix['cycle'])):
-        cycle = matrix['cycle'][i]
-        if i < first_cycle:
-            first_row = i
-        if i <= last_cycle:
-            last_row = i
-    matrix = matrix.iloc[first_row:(last_row+1)]
-    matrix.reset_index(drop=True, inplace=True)
-    features = features.iloc[first_row:(last_row+1)]
-    features.reset_index(drop=True, inplace=True)
-
-    # Revert columns order
-    matrix = matrix[matrix.columns[::-1]]
-    features = features[features.columns[::-1]]
-
-    # Excluded features
-    excluded_features.append('cycle')
-    features = features.drop(columns=excluded_features)
-    matrix = matrix.drop(columns=excluded_features)
-
-    matrix = matrix.to_numpy()
-
-    shap.summary_plot(
-        matrix,
-        features,
-        #shap_values[0][:1],
-        #testing_features.iloc[:1],
-        max_display=max_display_features,
-        sort= not sort_features
-    )
+    util_streamlit_deploy.plot_shap_streamlit(dataset, matrix, excluded_features, first_cycle, last_cycle, max_display_features, sort_features)
     st.set_option('deprecation.showPyplotGlobalUse', False)
     st.pyplot()
 
