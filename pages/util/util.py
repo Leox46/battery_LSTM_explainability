@@ -8,8 +8,6 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import mean_squared_error
 from sklearn import metrics
 import matplotlib.pyplot as plt
-import seaborn as sns
-from pprint import pprint
 
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
@@ -146,34 +144,6 @@ def write_capacity_data(battery, interval = 1, exclude_cycles = [], include_cycl
         worksheet.write(i+1, 1, capacities[i])
 
     workbook.close()
-
-def read_data_and_plot(battery, measure, measure_label):
-    dataset = pd.read_excel(battery+'/data/'+measure+'.xlsx', header=0)
-
-    sns.set_style("white")
-
-    x_values = []
-    y_values = []
-    current_cycle = dataset['cycle'][0]
-    count = 0
-    for i in range(len(dataset['cycle'])):
-        cycle = dataset['cycle'][i]
-        if(dataset['cycle'][i] != current_cycle):
-            plt.plot(y_values,x_values, label='Cycle ' + str(current_cycle))
-            x_values = []
-            y_values = []
-            current_cycle = cycle
-            count = count + 1
-        else:
-            x_values.append(dataset[measure][i])
-            y_values.append(dataset['time'][i] / 60)
-
-    plt.legend()
-    plt.xlabel('Time (minutes)')
-    plt.ylabel(measure_label)
-
-    plt.title(battery)
-    plt.show()
 
 def load_model(path):
     print('*************************')
