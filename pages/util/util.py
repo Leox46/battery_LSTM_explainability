@@ -156,8 +156,6 @@ def load_model(path):
     return model
 
 def test_model(model, features, target):
-
-
     print('*************************')
     print('***** Testing Model: *****')
     print('*************************')
