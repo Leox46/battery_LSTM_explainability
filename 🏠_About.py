@@ -2,14 +2,16 @@ import streamlit as st
 
 st.markdown(
 """
-Questa applicazione web è il risultato del lavoro di tesi svolto da Leonardo Dal Ronco: “Explainability applicata a reti neurali LSTM per la stima della capacità di batterie al litio” [link].
-I due obbiettivi di questo lavoro di tesi sono stati:
-- Implementare una rete neurale LSTM più semplice rispetto a quelle descritte in letteratura [riferimenti], ma in grado di ottenere gli stessi risultati in termini di accuratezza. Una rete più semplice migliorarne la successiva spiegabilità della stessa.
-- Applicare le principali tecniche di Explainability alla rete ottenuta in precedenza, in modo da fornire uno strumento in grado di aiutare a valutare la fiducia che è possibile riporre in tale modello.
+# About
 
-L’applicazione web è strutturata come segue:
-- NASA Dataset: in questa pagina è possibile interagire con i dati contenuti all’interno del NASA Li-ion Battery Aging Dataset [link / riferimenti], utilizzato per addestrare la rete neurale LSTM implementata. In questo dataset, sono riportati i dati dei cicli di carica - scarica effettuati dal NASA Li-ion Battery Aging Dataset [link / riferimenti] su 4 batterie, etichettate come B0005, B0006, B0007, B0018.
-- LSTM Model: in questa pagina è possibile interagire con il modello LSTM implementato, valutando l’accuratezza delle previsioni elaborate dalla rete neurale.
-- Explainability: in questa pagina è possibile osservare i risultati delle tecniche di Explainability applicate al modello LSTM implementato per la stima della capacità di una batteria al litio.
+This web application is the result of the thesis work carried out by engineer Leonardo Dal Ronco: "Explainability applied to LSTM neural networks for lithium battery capacity estimation".
+The two goals of this thesis work were:
+- Implement an LSTM neural network with the same structure as the networks described by [Ansari, S. (2021)](https://www.mdpi.com/2071-1050/13/23/13333) and [Choi, Y. (2019)](https://ieeexplore.ieee.org/abstract/document/8731962/), simpler than the one described by [Park, K. (2020)](https://ieeexplore.ieee.org/abstract/document/8967059), but able to obtain the same results in terms of accuracy. A simpler network improves the subsequent explainability of the network.
+- Apply explainability techniques to the network obtained previously, in order to provide a tool that can help evaluate the trust that can be placed in this model.
+
+The web application is structured as follows:
+- **NASA Battery Dataset**: on this page it is possible to interact with the data contained in the [NASA Li-ion Battery Aging Dataset](https://www.nasa.gov/content/prognostics-center-of-excellence-data-set-repository), used to train the implemented LSTM neural network. This dataset reports the data of 4 batteries, labeled as B0005, B0006, B0007, B0018, that were run through 3 different operational profiles (charge, discharge and impedance) at room temperature.
+- **LSTM Capacity Prediction**: on this page it is possible to interact with the implemented LSTM model, evaluating the accuracy of the predictions processed by the neural network.
+- **Explainability**: on this page it is possible to observe the results of the Explainability techniques applied to the LSTM model implemented for estimating the capacity of a lithium battery.
 """
 )
