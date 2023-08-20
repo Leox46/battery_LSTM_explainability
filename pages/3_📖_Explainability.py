@@ -3,6 +3,14 @@ import pages.explainability.explainability as explainability
 import pandas as pd
 import xlsxwriter
 
+st.markdown(
+"""
+# Explainability
+
+On this page it is possible to observe the results of the Explainability techniques applied to the LSTM model implemented for estimating the capacity of a lithium battery.
+"""
+)
+
 col1, col2 = st.columns(2)
 with col1:
     battery = st.selectbox(

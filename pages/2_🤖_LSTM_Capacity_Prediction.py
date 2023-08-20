@@ -7,6 +7,14 @@ from sklearn.metrics import mean_absolute_percentage_error
 from sklearn.metrics import mean_absolute_error
 import matplotlib.pyplot as plt
 
+st.markdown(
+"""
+# LSTM Capacity Prediction
+
+On this page it is possible to observe the results of the Explainability techniques applied to the LSTM model implemented for estimating the capacity of a lithium battery.
+"""
+)
+
 battery = st.selectbox(
     'Battery',
     ('B0005', 'B0006', 'B0007', 'B0018'))
