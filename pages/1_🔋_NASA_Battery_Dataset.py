@@ -5,12 +5,13 @@ import pages.nasa.nasa as nasa
 
 st.markdown(
 """
-Per addestrare la rete neurale LSTM implementata, sono stati utilizzati i dati contenuti all’interno del NASA Li-ion Battery Aging Dataset [link / riferimenti], utilizzato per addestrare la rete neurale LSTM implementata. In questo dataset, sono riportati i dati dei cicli di carica - scarica effettuati direttamente dal NASA Prognostics Center of Excellence Data Set Repository su 4 batterie (B0005, B0006, B0007, B0018) that were run through 3 different operational profiles (charge, discharge and impedance) at room temperature.
+# NASA Battery Dataset
 
-Per addestrare la rete LSTM, verranno sfruttati i dati misurati durante i cicli di carica delle batterie, quali tensione, intensità di corrente e temperatura della batteria misurati durante i cicli di carica.
-Per comprendere come cambiano i parametri interni della batteria durante il suo invecchiamento, verrà considerata anche la capacità misurata durante il ciclo di scarica precedente.
+To train the implemented LSTM neural network, the data contained within the [NASA Li-ion Battery Aging Dataset](https://www.nasa.gov/content/prognostics-center-of-excellence-data-set-repository) were used. This dataset reports the data of 4 batteries, labeled as B0005, B0006, B0007, B0018, that were run through 3 different operational profiles (charge, discharge and impedance) at room temperature.
 
-Tramite il grafico seguente, è possibile visualizzare per ognuna delle quattro batterie la tensione, l’intensità di corrente e la temperatura misurate durante i cicli di carica, e la capacità misurata durante i cicli di scarica.
+To train the LSTM network, data measured during battery charging cycles were exploited, such as voltage, current and temperature measured; the capacity measured during the previous discharging cycle was also used.
+
+On this page, it is possible to interact with the data contained in the dataset described above, displaying for each of the four batteries the voltage, current and temperature measured during charging cycles, and the capacity measured during discharging cycles.
 """
 )
 
