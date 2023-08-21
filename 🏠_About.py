@@ -6,7 +6,7 @@ st.markdown(
 
 This web application is the result of the thesis work carried out by engineer Leonardo Dal Ronco: "Explainability applied to LSTM neural networks for lithium battery capacity estimation".
 The two goals of this thesis work were:
-- Implement an LSTM neural network with the same structure as the networks described by [Ansari, S. (2021)](https://www.mdpi.com/2071-1050/13/23/13333) and [Choi, Y. (2019)](https://ieeexplore.ieee.org/abstract/document/8731962/), simpler than the one described by [Park, K. (2020)](https://ieeexplore.ieee.org/abstract/document/8967059), but able to obtain the same results in terms of accuracy. A simpler network improves the subsequent explainability of the network.
+- Implement an LSTM neural network with the same structure as the network described by [Ansari, S. (2021)](https://www.mdpi.com/2071-1050/13/23/13333), simpler than the ones described by [Choi, Y. (2019)](https://ieeexplore.ieee.org/abstract/document/8731962/) and [Park, K. (2020)](https://ieeexplore.ieee.org/abstract/document/8967059), but able to obtain the same results in terms of accuracy. A simpler network improves the subsequent explainability of the network.
 - Apply explainability techniques to the network obtained previously, in order to provide a tool that can help evaluate the trust that can be placed in this model.
 
 The web application is structured as follows:
