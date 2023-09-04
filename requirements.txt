@@ -4,7 +4,7 @@ openpyxl
 matplotlib
 keras==2.13.1
 tensorflow==2.13.0
-tf_keras_vis
 xlsxwriter
 numba>=0.57.1
-shap
+shap==0.42.1
+tf_keras_vis==0.8.5
