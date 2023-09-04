@@ -54,7 +54,7 @@ with col3:
         with col5:
             max_display_features = st.selectbox('# Features to show', range(1, 32), 14)
         with col6:
-            sort_features = st.toggle('Sort Features', help='Sort features by time')
+            sort_features = st.toggle('Sort Features', help='Sort features by time, from last measures (10-th instant of time) to first measures (1-st instant of time)')
 
 with col4:
     first_cycle = st.selectbox('Cycle from', dataset['cycle'])
